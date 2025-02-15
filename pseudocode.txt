@@ -1,0 +1,31 @@
+Title: ‘Rock Paper Scissors”
+paragraph: choose one
+buttons: “rock” “paper” scissors”
+
+1 = Rock, 2 = Paper, 3 = Scissors
+
+SEQUENCE 
+user inputs choice
+script uses input to compare to computer
+	function getHumanChoice(prompt(‘rock paper or scissors?’, )) {
+	
+	computer picks random of the 3 choices
+function getComputerChoice(max) {
+  return Math.floor(Math.random() * max + 1);
+}
+
+SEQUENCE
+	user picks 1
+	IF computer picks 2 THEN print “You lose!”
+		Computer score + 1
+			for (i=0; i < 5; i++) {
+				print(i);
+			}
+	ELSE IF computer picks 3 THEN print “You win!”
+		User score + 1
+	ELSE print “You tied!”
+
+display score of user and computer
+	IF user score is = 5, THEN print “User wins the game!”
+	ELSE IF computer score = 5, THEN print “Computer wins the game!”
+
