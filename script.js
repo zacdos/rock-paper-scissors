@@ -1,5 +1,6 @@
 function getHumanChoice() {
     let choice = prompt('rock paper or scissors?');
+    return choice;
 }
 
 function getComputerChoice(max = 3) {
@@ -19,17 +20,24 @@ function getComputerChoice(max = 3) {
 
 let humanSelection = getHumanChoice();
 let computerSelection = getComputerChoice();
+let humanScore = 0;
+let computerScore = 0;
+
 function playRound() {
-    if(humanSelection === computerSelection) {
-        console.log('tie!');
-    } else if (humanSelection === 'rock' && computerSelection === 'scissors') {
-        console.log('you win');
-    } else if (humanSelection === 'paper' && computerSelection === 'rock') {
-        console.log('you win');
-    } else if (humanSelection === 'scissors' && computerSelection === 'paper') {
-        console.log('you win');
-    } else {
-        console.log('computer wins!')
-    }
+        if(humanSelection === computerSelection) {
+            console.log('tie!');
+        } else if (humanSelection === 'rock' && computerSelection === 'scissors') {
+            console.log('Human: ' + (humanScore+1) + ', Computer: ' + computerScore)
+            return humanScore + 1;
+        } else if (humanSelection === 'paper' && computerSelection === 'rock') {
+            console.log('Human: ' + (humanScore+1) + ', Computer: ' + computerScore)
+            return humanScore + 1;
+        } else if (humanSelection === 'scissors' && computerSelection === 'paper') {
+            console.log('Human: ' + (humanScore+1) + ', Computer: ' + computerScore)
+            return humanScore + 1;
+        } else {
+            console.log('Human: ' + humanScore + ', Computer: ' + (computerScore+1))
+            return humanScore + 1;
+        }
  } 
 playRound()
