@@ -9,24 +9,24 @@ TTD:
 x NEED TO CONVERT COMPUTER CHOICE TO A STRING
 - let human choice take non-case sensitive answers
 - get the for function loop to work 9 times
-- 
+- get computer to change choice to string
 *******************
 
 
 get computer choice random number from 1-3 
 
 make function to compare human choice to computer choice using IF statements
-	REPEAT 9 times or until human or computer reaches score of 5
-	CALL function to get human choice with prompt
-	CALL function to get computer choice with random number 1-3
-		CONVERT computer choice to string
-	IF human choice = computer choice THEN PRINT TIE
-	ELSE IF human choice = 'rock' AND computer = 'scissors' THEN RETURN HUMAN +1
-	ELSE IF human choice = 'scissors' AND computer = 'paper' THEN RETURN HUMAN +1
-	ELSE IF human choice = 'paper' AND computer = 'rock' THEN RETURN HUMAN +1
-	ELSE return computer +1
+	x REPEAT 9 times or until human or computer reaches score of 5
+		x CALL function to get human choice with prompt
+		x CALL function to get computer choice with random number 1-3
+			CONVERT computer choice to string
+		IF human choice = computer choice THEN PRINT TIE
+		ELSE IF human choice = 'rock' AND computer = 'scissors' THEN RETURN HUMAN +1
+		ELSE IF human choice = 'scissors' AND computer = 'paper' THEN RETURN HUMAN +1
+		ELSE IF human choice = 'paper' AND computer = 'rock' THEN RETURN HUMAN +1
+		ELSE return computer +1
 		
-	IF computer or human = 5, BREAK;
+	x IF computer or human = 5, BREAK;
 
 
 
