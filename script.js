@@ -27,6 +27,8 @@ function playRound() {
         } else if (humanChoice === 'paper' && computerChoice === 'rock') {
             console.log('Human wins round!');
             humanScore += 1;
+        } else if (humanChoice != 'paper' || humanChoice !='rock' || humanChoice !='scissors') {
+            console.log('Please enter either "rock", "paper", or "scissors"')
         } else {
             console.log('Computer wins round!');
             computerScore += 1;
