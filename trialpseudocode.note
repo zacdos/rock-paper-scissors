@@ -1,0 +1,72 @@
+Title: 'Rock Paper Scissors'
+
+----- HTML -----
+"Choose your move"
+3 buttons for R P S
+(Human or Computer) "wins the current round" to change to " wins the entire match!"
+Human Score: 
+Computer Score: 
+
+----- JavaSc -----
+
+make human function to convert button into a choice variable, "rock", "paper", or "scissors"
+for (let child of div.children) {
+        child.addEventListener('click', () => {
+        let option = child.textContent;
+
+        switch(option) {
+                case 'rock':
+                choice = 'rock'
+                break;
+                case 'paper':
+                choice = 'paper'
+                break;
+                case 'scissors':
+                choice = 'scissors'
+                break;
+        }
+
+        hChoice.innerText = "Human's choice: " + choice
+        cMove.innerText = "Computer's choice: " + computer
+        });
+}
+        
+
+make computer function to select random integer between 1 and 3
+function computerRandom() {
+        let computerRandom = Math.floor(Math.random() * 3 + 1);
+        if (computerRandom === 1) { 
+                cChoice = 'rock'
+        } else if (computerRandom === 2) {
+                cChoice = 'paper'  
+        } else if (computerRandom === 3) {
+                cChoice = 'scissors'
+        }
+        computer = cChoice
+}       
+
+make variable for human score to = 0
+
+make variable for computer score to = 0
+
+when the button is clicked, a compareFunction will compare humanChoice and computerChoice
+        function compareChoice(choice, computer) {
+            if (choice === computer) {
+                    return;
+            } else if (choice === 'rock' && computer === 'scissors') {
+                    hScore.innerHTML ++
+            } else if (choice === 'scissors' && computer === 'paper') {
+                    hScore.innerHTML ++
+            } else if (choice === 'paper' && computer === 'rock') {
+                    hScore.innerHTML ++ 
+            } else { 
+                    cScore.innerHTML ++
+            }
+        }
+
+// TO WORK ON //
+make function, when someone scores 5 points, 
+        to take out buttons
+        declare winner
+        with button to reset the game
+//THINGS NOT WORKING//

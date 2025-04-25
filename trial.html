@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+    <head lang="en">
+        <title>Rock, Paper, or Scissors?</title>
+    </head>
+    <body>
+        <div>
+            <h1>Choose your move!</h1>
+        </div>
+        <div>
+            <button id="rock">ROCK</button>
+            <button id="paper">PAPER</button>
+            <button id="scissors">SCISSORS</button>
+        </div>
+        <div>
+            <p id="human">Human score: </p>
+            <p id="hScore"></p>
+            <p id="computer">Computer Score: </p>
+            <p id="cScore"></p>
+        </div>
+    </body>
+    <script>
+    
+    
+        let human = document.querySelector('#human')
+        let comp = document.querySelector('#computer')
+        let rock = document.querySelector('#rock')
+        let scissors = document.querySelector('#scissors')
+        let paper = document.querySelector('#paper')
+        let hScore = document.querySelector('#hScore')
+        let cScore = document.querySelector('#cScore')
+
+
+        rock.addEventListener('click', () => {
+            compare()
+            console.log(humanChoice)
+            return humanChoice = 1
+        })
+
+        paper.addEventListener('click', () => {
+            humanChoice = 2
+            compare()
+            console.log(humanChoice)
+        })
+
+        scissors.addEventListener('click', () => {
+            humanChoice = 3
+            compare()
+            console.log(humanChoice)
+        })
+
+        function computer() {
+            let computerChoice = Math.floor(Math.random() * 3 + 1) 
+            console.log(computerChoice)
+        }
+
+        function compare() {
+            let humanChoice = ''
+            let computerChoice = ''
+            computer() 
+            if (humanChoice === computerChoice) {
+                console.log('Tie round!');
+                return hScore += 0;
+            } else if (humanChoice === 1 && computerChoice === 3) {
+                console.log('Human wins round!');
+                return hScore += "1";
+            } else if (humanChoice === 2 && computerChoice === 1) {
+                console.log('Human wins round!');
+                return hScore += "1";
+            } else if (humanChoice === 3 && computerChoice === 2) {
+                console.log('Human wins round!');
+                return hScore += "1";
+            } else {
+                console.log('Computer wins round!');
+                return cScore += "1";
+            }
+        }
+
+    </script>
+</html>

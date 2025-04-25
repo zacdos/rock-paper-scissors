@@ -1,0 +1,113 @@
+//to test out bits of code
+
+<!DOCTYPE html>
+    <head lang="en">
+        <title>Rock, Paper, or Scissors?</title>
+    </head>
+    <body>
+        <div>
+            <h1>Choose your move!</h1>
+        </div>
+        <div id="buttons">
+            <button id="rock">rock</button>
+            <button id="paper">paper</button>
+            <button id="scissors">scissors</button>
+        </div>
+        <div>
+            <div>
+                <p id="hChoice">Human's choice: </p>
+                <p id="cMove">Computer's choice: </p>
+                <p id="human">Human score: </p>
+            </div>
+            <div>
+                <p id="hScore">0</p>
+                <p id="computer">Computer score: </p>
+                <p id="cScore">0</p>
+            </div>
+            <p id="announcement"></p>
+        </div>
+    </body>
+    <script>    
+        let human = document.querySelector('#human')
+        let comp = document.querySelector('#computer')
+        let rock = document.querySelector('#rock')
+        let scissors = document.querySelector('#scissors')
+        let paper = document.querySelector('#paper')
+        let hScore = document.querySelector('#hScore')
+        let div = document.querySelector('#buttons')
+        let hChoice = document.querySelector('#hChoice')
+        let cChoice = document.querySelector('#cMove')
+        let ann = document.querySelector('#announcement')
+
+        let choice = ''
+        let computer = ''
+
+        for (let child of div.children) {
+            child.addEventListener('click', () => {
+                let option = child.textContent;
+                computerRandom()
+
+                switch(option) {
+                    case 'rock':
+                        choice = 'rock'
+                        break;
+                    case 'paper':
+                        choice = 'paper'
+                        break;
+                    case 'scissors':
+                        choice = 'scissors'
+                        break;
+                }
+
+                compareChoice(choice, computer)
+
+                hChoice.innerText = "Human's choice: " + choice
+                cMove.innerText = "Computer's choice: " + computer
+            });
+            }
+
+
+        function computerRandom() {
+            let computerRandom = Math.floor(Math.random() * 3 + 1);
+            if (computerRandom === 1) { 
+                    cChoice = 'rock'
+            } else if (computerRandom === 2) {
+                    cChoice = 'paper'  
+            } else if (computerRandom === 3) {
+                    cChoice = 'scissors'
+            }
+            computer = cChoice
+        }       
+        
+        function compareChoice(choice, computer) {
+            if (choice === computer) {
+                    ann.innerHTML = "It's a tie!"
+                    return;
+            } else if (choice === 'rock' && computer === 'scissors') {
+                    hScore.innerHTML ++
+                    ann.innerHTML = "Human wins the round!"
+                    winner();
+            } else if (choice === 'scissors' && computer === 'paper') {
+                    hScore.innerHTML ++
+                    ann.innerHTML = "Human wins the round!"
+                    winner();
+            } else if (choice === 'paper' && computer === 'rock') {
+                    hScore.innerHTML ++ 
+                    ann.innerHTML = "Human wins the round!"
+                    winner();
+            } else { 
+                    cScore.innerHTML ++
+                    ann.innerHTML = "Computer wins the round!"
+                    winner();
+            }
+        }
+
+        function winner() {
+            if (Number(cScore.innerHTML) === 5) {
+                div.innerHTML = "Computer wins the match! GAME OVER"
+            } else if (Number(hScore.innerHTML) === 5) {
+                div.innerHTML = "Human wins the match! GAME OVER"
+            }
+        }
+    </script>
+</html>

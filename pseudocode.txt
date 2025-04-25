@@ -29,3 +29,12 @@ display score of user and computer
 	IF user score is = 5, THEN print “User wins the game!”
 	ELSE IF computer score = 5, THEN print “Computer wins the game!”
 
+---
+TO DO:
+	remove logic that plays 5 rounds
+	create 3 buttons for R P S
+		add event listener to buttons that call the playRound function
+	add a div for display results and change all of console.logs into DOM methods
+	display the running score
+	announce winner when the player reaches 5 points
+	
