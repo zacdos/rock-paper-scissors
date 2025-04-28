@@ -3,17 +3,30 @@
         Title
     </header>
     <body>
+        <div id = 'button'>
+            <button id="add">Add reset button?</button>
+        </div>
+    <script>
+            
+        
+        // add to testing.html
+        let add = document.querySelector('#add')
+        let body = document.querySelector('body')
+        let div = document.querySelector('button')
 
+        let resetButton = document.createElement('button')
+        
+        resetButton.innerHTML = 'Reset?'
 
-        <script>
-            function winner() {
-                if (cScore === 5) {
-                    ann.innerHTML = "Computer wins the match! GAME OVER"
-                } else if (hScore === 5) {
-                    ann.innerHTML = "Computer wins the match! GAME OVER"
-                }
-            }
+        add.addEventListener('click', () => {
+            button.innerHTML = ''
+            button.appendChild(resetButton)
+        })
 
+        let reset = document.querySelector('#reset')
+        resetButton.addEventListener('click', () => {
+            location.reload();
+        })
 
         </script>
     </body>

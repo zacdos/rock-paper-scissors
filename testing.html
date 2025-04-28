@@ -104,10 +104,16 @@
 
         function winner() {
             if (Number(cScore.innerHTML) === 5) {
-                div.innerHTML = "Computer wins the match! GAME OVER"
+                div.innerHTML = ''
+                ann.innerHTML = "Computer wins the match! GAME OVER"
+
             } else if (Number(hScore.innerHTML) === 5) {
-                div.innerHTML = "Human wins the match! GAME OVER"
-            }
+                div.innerHTML = ''
+                ann.innerHTML = "Human wins the match! GAME OVER"            }
         }
+
+        let reset = document.querySelector('#reset')
+        
+  
     </script>
 </html>
