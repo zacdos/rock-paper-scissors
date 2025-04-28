@@ -9,6 +9,8 @@
             <h1>Choose your move!</h1>
         </div>
         <div id="buttons">
+            <p>Round #</p>
+            <p id="round">0</p>
             <button id="rock">rock</button>
             <button id="paper">paper</button>
             <button id="scissors">scissors</button>
@@ -17,9 +19,9 @@
             <div>
                 <p id="hChoice">Human's choice: </p>
                 <p id="cMove">Computer's choice: </p>
-                <p id="human">Human score: </p>
             </div>
             <div>
+                <p id="human">Human score: </p>
                 <p id="hScore">0</p>
                 <p id="computer">Computer score: </p>
                 <p id="cScore">0</p>
@@ -38,6 +40,7 @@
         let hChoice = document.querySelector('#hChoice')
         let cChoice = document.querySelector('#cMove')
         let ann = document.querySelector('#announcement')
+        let round = document.querySelector('#round')
 
         let choice = ''
         let computer = ''
@@ -46,7 +49,7 @@
             child.addEventListener('click', () => {
                 let option = child.textContent;
                 computerRandom()
-
+                round.innerHTML ++
                 switch(option) {
                     case 'rock':
                         choice = 'rock'

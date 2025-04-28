@@ -92,5 +92,6 @@ if (Number(cScore.innerHTML) === 5)
         css link
                 change button sizes
                 div the choices so they are next to each other
-
+                center everything to the window
+                bold the announcement paragraph
 //THINGS NOT WORKING//
