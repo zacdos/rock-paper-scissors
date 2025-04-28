@@ -49,24 +49,48 @@ make variable for human score to = 0
 
 make variable for computer score to = 0
 
+make announcement variable
+
 when the button is clicked, a compareFunction will compare humanChoice and computerChoice
-        function compareChoice(choice, computer) {
-            if (choice === computer) {
-                    return;
-            } else if (choice === 'rock' && computer === 'scissors') {
-                    hScore.innerHTML ++
-            } else if (choice === 'scissors' && computer === 'paper') {
-                    hScore.innerHTML ++
-            } else if (choice === 'paper' && computer === 'rock') {
-                    hScore.innerHTML ++ 
-            } else { 
-                    cScore.innerHTML ++
-            }
+function compareChoice(choice, computer) {
+        if (choice === computer) {
+                ann.innerHTML = "It's a tie!"
+                return;
+        } else if (choice === 'rock' && computer === 'scissors') {
+                hScore.innerHTML ++
+                ann.innerHTML = "Human wins the round!"
+                winner();
+        } else if (choice === 'scissors' && computer === 'paper') {
+                hScore.innerHTML ++
+                ann.innerHTML = "Human wins the round!"
+                winner();
+        } else if (choice === 'paper' && computer === 'rock') {
+                hScore.innerHTML ++ 
+                ann.innerHTML = "Human wins the round!"
+                winner();
+        } else { 
+                cScore.innerHTML ++
+                ann.innerHTML = "Computer wins the round!"
+                winner();
         }
+}
+
+winner function will check if a score hits 5
+if (Number(cScore.innerHTML) === 5) 
+
+        clears the choices
+        div.innerHTML = ''
+
+        announces the winner
+        ann.innerHTML = 'Computer winst the match! GAME OVER'
+
+        adds a reset button
+
 
 // TO WORK ON //
-make function, when someone scores 5 points, 
-        to take out buttons
-        declare winner
-        with button to reset the game
+        increase round count by 1 with each click
+        css link
+                change button sizes
+                div the choices so they are next to each other
+
 //THINGS NOT WORKING//

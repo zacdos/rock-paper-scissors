@@ -105,15 +105,20 @@
         function winner() {
             if (Number(cScore.innerHTML) === 5) {
                 div.innerHTML = ''
+                div.appendChild(resetButton)
                 ann.innerHTML = "Computer wins the match! GAME OVER"
-
             } else if (Number(hScore.innerHTML) === 5) {
                 div.innerHTML = ''
-                ann.innerHTML = "Human wins the match! GAME OVER"            }
+                div.appendChild(resetButton)
+                ann.innerHTML = "Human wins the match! GAME OVER"
+            }
         }
 
-        let reset = document.querySelector('#reset')
+        let resetButton = document.createElement('button');
+        resetButton.innerHTML = 'Play Again?'
         
-  
+        resetButton.addEventListener('click', () => {
+            location.reload();
+        })
     </script>
 </html>
