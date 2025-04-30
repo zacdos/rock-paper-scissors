@@ -1,0 +1,87 @@
+
+
+#buttonDiv {
+    display: flex;
+    justify-content: center;
+}
+
+#cym {
+    font: bold 50px sans-serif; 
+    color: #3489eb;
+    padding-right: 20px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+#buttons {
+    width: 240px;
+    height: 220px;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    margin: 10px 10px 0px 10px;
+    border-radius: 100px;
+    flex: none;
+    border: dotted 1px black;
+}
+
+#status {
+    display: flex;
+    justify-content: space-around;
+}
+
+#round {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+#rounds {
+    padding: 0 0 0 50px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#info {
+
+}
+
+#headerInfo, #humanInfo, #computerInfo {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+#headerInfo > p {
+    width: 75px;
+    margin-bottom: -15px;
+    background-color: #c9d6cd;
+}
+
+#humanInfo > p {
+    width: 75px;
+    margin-bottom: -35px;
+}
+
+#computerInfo > p {
+    width: 75px;
+    margin-bottom: -15px;
+}
+
+#cPlayer {
+    background-color: #f54046;
+}
+
+#hPlayer {
+    background-color: #23cc6c;
+
+}

@@ -1,32 +1,43 @@
-//to test out bits of code
-
 <!DOCTYPE html>
     <head lang="en">
         <title>Rock, Paper, or Scissors?</title>
+        <link rel="stylesheet" href="trials.css">
     </head>
     <body>
-        <div>
-            <h1>Choose your move!</h1>
-        </div>
-        <div id="buttons">
-            <p>Round #</p>
-            <p id="round">0</p>
-            <button id="rock">rock</button>
-            <button id="paper">paper</button>
-            <button id="scissors">scissors</button>
-        </div>
-        <div>
+
             <div>
-                <p id="hChoice">Human's choice: </p>
-                <p id="cMove">Computer's choice: </p>
+                <p id="cym">Choose your move!</p>
             </div>
-            <div>
-                <p id="human">Human score: </p>
+            <div id="buttonDiv">
+                <div id="buttons">
+                    <button id="rock">rock</button>
+                    <button id="paper">paper</button>
+                    <button id="scissors">scissors</button>
+                </div>
+            </div>
+        <div id="status">
+            <p id="announcement">Press a button to play the game.</p>
+        </div>
+        </div>
+        <div id="info">
+            <div id="headerInfo">
+                <p>player</p>
+                <p>choice</p>
+                <p>score</p>
+                <p>round</p>
+            </div>
+            <div id="humanInfo">
+                <p id="hPlayer">human  </p>
+                <p id="hChoice">deciding</p>
                 <p id="hScore">0</p>
-                <p id="computer">Computer score: </p>
-                <p id="cScore">0</p>
+                <p id="round">0</p>
             </div>
-            <p id="announcement"></p>
+            <div id="computerInfo">
+                <p id="cPlayer">computer  </p>
+                <p id="cMove">deciding</p>
+                <p id="cScore">0</p>
+                <p></p>
+            </div>
         </div>
     </body>
     <script>    
@@ -64,8 +75,8 @@
 
                 compareChoice(choice, computer)
 
-                hChoice.innerText = "Human's choice: " + choice
-                cMove.innerText = "Computer's choice: " + computer
+                hChoice.innerText = choice
+                cMove.innerText = computer
             });
             }
 

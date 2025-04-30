@@ -88,10 +88,6 @@ if (Number(cScore.innerHTML) === 5)
 
 
 // TO WORK ON //
-        increase round count by 1 with each click
         css link
-                change button sizes
-                div the choices so they are next to each other
-                center everything to the window
-                bold the announcement paragraph
+        make round to be pushed down more
 //THINGS NOT WORKING//
